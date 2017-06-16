@@ -1,8 +1,0 @@
-'''
-Created on Jun 15, 2017
-
-@author: adicds
-'''
-
-if __name__ == '__main__':
-    print("Hello, World!")
