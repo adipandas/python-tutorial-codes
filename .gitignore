@@ -1,2 +1,4 @@
 #ignore the following folder/files
 RemoteSystemsTempFiles
+#ignore .metadata files
+.metadata
