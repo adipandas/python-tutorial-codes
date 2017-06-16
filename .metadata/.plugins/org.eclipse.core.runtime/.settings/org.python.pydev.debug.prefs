@@ -1,0 +1,3 @@
+DJANGO_INTERPRETER_CMDS=import os; os.environ['DJANGO_SETTINGS_MODULE'] \= '${DJANGO_SETTINGS_MODULE}'; import django\r\nif django.get_version() < '1.5'\:\r\n\tfrom django.core import management\r\n\timport ${DJANGO_SETTINGS_MODULE} as settings\r\n\tmanagement.setup_environ(settings)\r\nif django.get_version() >\= '1.7'\:\r\n\tfrom django.core.wsgi import get_wsgi_application\r\n\tapplication \= get_wsgi_application()\r\n
+INITIAL_INTERPRETER_CMDS=import sys; print('%s %s' % (sys.executable or sys.platform, sys.version))\r\n
+eclipse.preferences.version=1
