@@ -25,14 +25,19 @@ if __name__ == '__main__':
     # Declaring values in python
     a, b = 0, 1
     
-    # This is a conditionals example    
+    # To find the type of variable in python
+    print('Variable type of \'a\' is', type(a))
+    
+    # This is a conditionals example: CONDITIONAL EXECUTION    
     if a<b:
         print('a({}) is less than b({})'.format(a, b))
+    elif a>b:
+        print('a({}) is greater than b({})'.format(a, b))
     else:
-        print('a({}) is not less than b({})'.format(a, b))
+        print('a({}) is equal to b({})'.format(a, b))
     
     
-    # Conditional expressions
+    # Conditional expressions OR Conditional Value
     print("a-foo" if a < b else 'a-bar')
     
     # while loop example with Fibonacci series
