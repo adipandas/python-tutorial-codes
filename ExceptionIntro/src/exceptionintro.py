@@ -18,7 +18,7 @@ def simple_exception_demo():
     else:
         for line in fh:
             print(line.strip())
-
+            
 def exception_demo():
     print('Notice:\nIn try block, the code execution stops at the line where exception occurs. \
     The further code is not executed.')
@@ -40,6 +40,23 @@ def exception_demo_specific_exception():
         for line in fh:
             print(line.strip())
 
+def raise_exception_demo():
+    print('Demonstration of raising an exception in python.')
+    
+    try:
+        for line in readfile('sample.doc'): print(line.strip())
+    except IOError as e:
+        print('File cannot be found,', e)
+    except ValueError as e:
+        print('Bad filename.', e)
+
+def readfile(filename):
+    if filename.endswith('.txt'):
+        fh = open(filename)
+        return fh.readlines()   # This function returns an iterator
+    else:
+        raise ValueError('Filename must end with \'.txt\'. Please check the file format.')
+    
 def main():
     simple_exception_demo()
     print()
@@ -48,5 +65,7 @@ def main():
     exception_demo_specific_exception()
     print()
     read_file_n_display()
+    print()
+    raise_exception_demo()
     
 if __name__ == '__main__':main()
