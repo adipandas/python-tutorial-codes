@@ -30,8 +30,16 @@ def optional_arg_func(a, b=None, c=30):
     print('a={}'.format(a))
     print('b={}'.format(b))
     print('c={}'.format(c))
-    
 
+def arbitrary_list_arg_func_1(*args):
+    print('*args: stands for list of optional arguments')
+    print('Notice arbitrary arguments are passed as a tuple to the function. Thus, one can use it as a iterator.')
+    print(args)
+
+def arbitrary_list_arg_func_2(a, b, c, *args):
+    print('*args: stands for list of optional arguments')
+    print(a, b, c, args)
+    
 def main():
     for n in range(1, 20):
         isprime(n)
@@ -40,5 +48,9 @@ def main():
     optional_arg_func(n)            # do not provide optional arguments
     print()
     optional_arg_func(n, 30, 50)    # give optional arguments
+    print()
+    arbitrary_list_arg_func_1(1,2,3,4,5)
+    print()
+    arbitrary_list_arg_func_2(1, 2, 3, 4,5,6,7)
     
 if __name__ == '__main__': main()
