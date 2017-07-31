@@ -40,11 +40,13 @@ def arbitrary_list_arg_func_2(a, b, c, *args):
     print('*args: stands for list of optional arguments')
     print(a, b, c, args)
     
+
+    
 def main():
     for n in range(1, 20):
         isprime(n)
     
-    print()    
+    print()
     optional_arg_func(n)            # do not provide optional arguments
     print()
     optional_arg_func(n, 30, 50)    # give optional arguments
