@@ -1,0 +1,6 @@
+This is a sample file.
+It contains sample text.
+There is few lines of text data in this file.
+This text file was used to write a demonstration program.
+The program is 'exceptionintro.py'.
+It deals with exception handling in python language.
