@@ -18,7 +18,27 @@ def isprime(n):
     else:
         print(n, 'is a prime number.')
         
+def optional_arg_func(a, b=None, c=30):
+    print('This demonstrates optional arguments for the functions.')
+    print('since b and c have default values in the function arguments, these are optional.\nFunction call will woork even if b and c are not provided.')
+    print('\'a\' has no default. Therefore, it becomes a mandatory argument for the function.')
+    print('Value of b is None.\nNone is given as a variable value when variable is to be kept as optional in function arguments but one does not want to assign any value to it.')
+    
+    if b is None:
+        b = 433
+    
+    print('a={}'.format(a))
+    print('b={}'.format(b))
+    print('c={}'.format(c))
+    
 
-if __name__ == '__main__':
+def main():
     for n in range(1, 20):
         isprime(n)
+    
+    print()    
+    optional_arg_func(n)            # do not provide optional arguments
+    print()
+    optional_arg_func(n, 30, 50)    # give optional arguments
+    
+if __name__ == '__main__': main()
