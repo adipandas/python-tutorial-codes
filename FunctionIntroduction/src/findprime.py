@@ -40,7 +40,16 @@ def arbitrary_list_arg_func_2(a, b, c, *args):
     print('*args: stands for list of optional arguments')
     print(a, b, c, args)
     
-
+def key_word_func_args(a, b, *args, **kargs):
+    print('Key word function arguments are discussed in this function')
+    print('a={}'.format(a))
+    print('b={}'.format(b))
+    print('arbitraty number of arguments as tuple = {}'.format(args))
+    print('\nFollowing represents key-word arguments:')
+    print('NOTE: key-word arguments are actually passed as dictionary to the function.')
+    
+    for k in kargs:
+        print('key = {} and value = {}'.format(k, kargs[k]))
     
 def main():
     for n in range(1, 20):
@@ -54,5 +63,7 @@ def main():
     arbitrary_list_arg_func_1(1,2,3,4,5)
     print()
     arbitrary_list_arg_func_2(1, 2, 3, 4,5,6,7)
+    print()
+    key_word_func_args(3, 45, 1 , 2, 3, one = 1, two = 2, three = 3)
     
 if __name__ == '__main__': main()
