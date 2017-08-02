@@ -23,6 +23,7 @@ def optional_arg_func(a, b=None, c=30):
     print('since b and c have default values in the function arguments, these are optional.\nFunction call will woork even if b and c are not provided.')
     print('\'a\' has no default. Therefore, it becomes a mandatory argument for the function.')
     print('Value of b is None.\nNone is given as a variable value when variable is to be kept as optional in function arguments but one does not want to assign any value to it.')
+    print('Default arguments cannot be defined before non-default arguments.')
     
     if b is None:
         b = 433
@@ -50,7 +51,7 @@ def key_word_func_args(a, b, *args, **kargs):
     
     for k in kargs:
         print('key = {} and value = {}'.format(k, kargs[k]))
-    
+        
 def func_return_multiple_val():
     print('Demo of returning multiple values in python')
     a = 1
@@ -58,6 +59,34 @@ def func_return_multiple_val():
     c = 3
     d = 'This is a string'
     return a, b, c, d
+
+def generator_func_demo():
+    print('This function is a demo of generator function.')
+    print('Generator function returns an iterator object.')
+    
+    print('The function used here, is a generator function for inclusive range.')
+    for i in inclusive_range(0,10,1):
+        print(i, end=' ')
+
+def inclusive_range(*args):
+    n_args = len(args)
+    if n_args < 1: raise TypeError('Minimum 1 argument required.')
+    
+    if n_args == 1:
+        start = 0
+        step = 0
+        stop = args[0]
+    elif n_args == 2:
+        (start, stop) = args
+        step = 1
+    elif n_args == 3:
+        (start, stop, step) = args
+    else: raise TypeError('Maximum 3 arguments required. Given {} arguments to the function'.format(n_args))
+    
+    i = start
+    while i<=stop:
+        yield i             # yield makes the function as a generator function
+        i += step
     
 def main():
     for n in range(1, 20):
@@ -77,5 +106,8 @@ def main():
     
     a, b, c, d = func_return_multiple_val()
     print('a={}, b = {}, c={}\nd={}'.format(a,b,c,d))
+    
+    print()
+    generator_func_demo()
         
 if __name__ == '__main__': main()
