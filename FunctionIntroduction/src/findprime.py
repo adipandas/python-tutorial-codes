@@ -51,6 +51,14 @@ def key_word_func_args(a, b, *args, **kargs):
     for k in kargs:
         print('key = {} and value = {}'.format(k, kargs[k]))
     
+def func_return_multiple_val():
+    print('Demo of returning multiple values in python')
+    a = 1
+    b = 2
+    c = 3
+    d = 'This is a string'
+    return a, b, c, d
+    
 def main():
     for n in range(1, 20):
         isprime(n)
@@ -65,5 +73,9 @@ def main():
     arbitrary_list_arg_func_2(1, 2, 3, 4,5,6,7)
     print()
     key_word_func_args(3, 45, 1 , 2, 3, one = 1, two = 2, three = 3)
+    print()
     
+    a, b, c, d = func_return_multiple_val()
+    print('a={}, b = {}, c={}\nd={}'.format(a,b,c,d))
+        
 if __name__ == '__main__': main()
