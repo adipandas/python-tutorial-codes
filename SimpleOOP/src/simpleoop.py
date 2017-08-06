@@ -38,6 +38,7 @@ class Man_from_moon():
     def __init__(self, **kargs):
         print('This class defines the scalability of the class data.')
         print('Use of dictoionaries in class variable definition can make the class data scalable easily.')
+        print('Dictionaries used as kwargs OR key-word arguments.')
         self.variables = kargs
         
     def get_face(self):
