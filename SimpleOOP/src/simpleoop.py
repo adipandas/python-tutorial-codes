@@ -60,6 +60,31 @@ class Man_from_moon():
         print('Key-value argument makes the class model easily scalable in python.')
         self.variables[k] = v
 
+class Phone:
+    def __init__(self):
+        print('parent class')
+    
+    def buttons(self):
+        print('Has buttons to dial a number.')
+        
+    def screen(self):
+        print('Phone has a black and white display!')
+            
+class Mobile_phone(Phone):
+    def __init__(self):
+        print('Child class of Phone')
+        
+    def internet_connection(self):
+        print('Can connect to internet using WiFi!')
+        
+    def buttons(self):
+        print('Buttons on touch screen! -> Overriding buttons from Parent class Phones!')
+
+    def screen(self):
+        super().screen()   # method to access parent class methods
+        print('Display is colored as a whole.')
+        
+
 def main():
     # instantiate: make object of the class
     f = Fibonacci(0,1)
@@ -83,5 +108,18 @@ def main():
     print('Getting value of \'intelligence\' set in constructor:', marty.get_variable('intelligence'))
     marty.set_variable('intelligence', 'VeryHighIntell')
     print('Getting new value of \'intelligence\':', marty.get_variable('intelligence'))
+    
+    print()
+    print('Explaining Inheritance in Python OOP:')
+    telepone = Phone()
+    print('Methods of obj telephone:')
+    telepone.buttons()
+    telepone.screen()
+    samsung = Mobile_phone()
+    print('Methods of derived class:')
+    samsung.internet_connection()
+    samsung.buttons()
+    samsung.screen()
+    
     
 if __name__ == '__main__': main()
