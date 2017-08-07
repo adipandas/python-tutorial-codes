@@ -83,8 +83,34 @@ class Mobile_phone(Phone):
     def screen(self):
         super().screen()   # method to access parent class methods
         print('Display is colored as a whole.')
-        
+    
+class Rose:
+    def color(self):
+        print('Rose is Red.')
+    def smell(self):
+        print('Rose has a sweet smell.')
+    def stem(self):
+        print('Stem of rose have thorns.')
+    def location(self):
+        print('Rose in the garden.') 
 
+class Lotus:
+    def color(self):
+        print('Lotus is pink.')
+    def smell(self):
+        print('Lotus has no smell.')
+    def stem(self):
+        print('Stem of lotus has no thorns.')
+    def location(self):
+        print('Lotus in the pond.')
+        
+def what_location_n_color(lotus):
+    lotus.location()
+    lotus.color()
+
+def smell_the_flower(rose):
+    rose.smell()
+    
 def main():
     # instantiate: make object of the class
     f = Fibonacci(0,1)
@@ -120,6 +146,16 @@ def main():
     samsung.internet_connection()
     samsung.buttons()
     samsung.screen()
+    
+    print()
+    print('Explaining POLYMORPHISM in python:')
+    print('Python being loosely typed language, polymorphism is inherent in this language.')
+    redrose = Rose()
+    redlotus = Lotus()
+    for o in (redrose, redlotus):
+        what_location_n_color(o)
+        smell_the_flower(o)
+        o.color()
     
     
 if __name__ == '__main__': main()
