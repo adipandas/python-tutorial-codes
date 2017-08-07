@@ -157,5 +157,6 @@ def main():
         smell_the_flower(o)
         o.color()
     
+    print('Notice how completely different objects like of class Rose and Lotus can be used in same way.\nThis is polymorphism.')
     
 if __name__ == '__main__': main()
