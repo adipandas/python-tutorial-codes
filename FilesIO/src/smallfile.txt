@@ -1,0 +1,5 @@
+01 This is a line of text
+02 Find strings here
+03 Find alphabets here
+04 Find letters and english here
+05 This is a text file
