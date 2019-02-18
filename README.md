@@ -12,5 +12,5 @@ I will like to learn more about python. If anyone wishes to contribute and add i
 ### Some fastastic links to learn python
 1. [Operator and Function overloading in custom python class](https://realpython.com/operator-function-overloading/)
 
-### Collection of Python ::snake:: Awesomeness!!
+### Collection of Python :snake: Awesomeness!!
 [https://awesome-python.com/](https://awesome-python.com/)
