@@ -10,6 +10,7 @@ If anyone wishes to contribute and add in to these demo codes, feel free to do s
 
 ### Some fastastic links to learn python
 1. [Operator and Function overloading in custom python class](https://realpython.com/operator-function-overloading/)
+2. [Python bindings for C/C++](https://realpython.com/python-bindings-overview/?fbclid=IwAR1a8LQdUaJ-Hk0gd9ocJ3KpJWhVEBaMCGUERFKFkTzGpL9wsX7-OCxp3ac)
 
 ### Collection of Python :snake: Awesomeness!!
 [https://awesome-python.com/](https://awesome-python.com/)
